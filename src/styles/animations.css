@@ -1,0 +1,172 @@
+/* ——— Animations & transitions globales ——— */
+
+/* Entrée de page à chaque changement de route */
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.page-enter {
+  animation: page-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Révélation des sections au défilement (classes posées par PageReveal) */
+main > section.reveal,
+main.inner > .shell > *.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease var(--d, 0ms),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) var(--d, 0ms);
+}
+main > section.reveal.is-visible,
+main.inner > .shell > *.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Cartes des grilles : apparition en cascade… */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease var(--d, 0ms),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) var(--d, 0ms),
+    translate 0.3s ease,
+    box-shadow 0.3s ease;
+}
+section.is-visible .reveal-item,
+main.inner > .shell > *.is-visible .reveal-item {
+  opacity: 1;
+  transform: none;
+}
+
+/* …puis soulèvement au survol (propriété `translate` : aucun conflit avec le reveal) */
+.pro-grid > .reveal-item:hover,
+.team-grid > .reveal-item:hover,
+.value-grid > .reveal-item:hover,
+.official-grid > .reveal-item:hover,
+.statistics-grid > .reveal-item:hover,
+.statistics-indicators > .reveal-item:hover,
+.photo-gallery > .reveal-item:hover,
+.featured-grid > .reveal-item:hover,
+.cards-row > .reveal-item:hover {
+  translate: 0 -6px;
+  box-shadow: 0 18px 34px rgba(24, 48, 64, 0.16);
+}
+
+/* Boutons : soulèvement + ombre, écrasement au clic */
+.btn {
+  transition:
+    translate 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.btn:hover {
+  translate: 0 -2px;
+  box-shadow: 0 10px 22px rgba(24, 48, 64, 0.2);
+}
+.btn:active {
+  translate: 0 0;
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+/* Zoom doux sur les images des cartes d'actualités */
+.news-mini-card,
+.featured-card {
+  overflow: hidden;
+}
+.news-mini-card img,
+.featured-card img {
+  transition: scale 0.5s ease;
+}
+.news-mini-card:hover img,
+.featured-card:hover img {
+  scale: 1.06;
+}
+
+/* Liens du pied de page : même filet or→terre cuite que le menu */
+.footer-links a {
+  position: relative;
+  width: fit-content;
+  transition:
+    color 0.25s ease,
+    translate 0.25s ease;
+}
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+.footer-links a:hover {
+  color: #fff;
+  translate: 4px 0;
+}
+.footer-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Fil d'Ariane : glisse vers la gauche au survol */
+.back {
+  transition: translate 0.25s ease;
+}
+.back:hover {
+  translate: -4px 0;
+}
+
+/* Onglets, sommaires et champs : micro-retours cohérents */
+.programs-section .tabs button {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    translate 0.2s ease;
+}
+.programs-section .tabs button:hover {
+  translate: 2px 0;
+}
+.faq-list summary {
+  transition: color 0.2s ease;
+}
+.faq-list summary:hover {
+  color: var(--green);
+}
+input,
+textarea {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(23, 77, 66, 0.15);
+}
+
+/* Accessibilité : aucun mouvement si l'utilisateur le demande */
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+  main .reveal,
+  main .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    translate: 0 0 !important;
+    transition: none !important;
+  }
+}
