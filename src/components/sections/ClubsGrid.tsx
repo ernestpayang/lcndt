@@ -1,7 +1,7 @@
 const clubs = [
-  { name: 'Club de lecture', leader: 'Mme. K. Sembène', freq: 'Hebdomadaire' },
-  { name: 'Football', leader: 'M. T. Ngonga', freq: '3x / semaine' },
-  { name: 'Club scientifique', leader: 'Mme. R. Dodo', freq: 'Bi-mensuel' },
+  { name: 'Bibliothèque', leader: 'Soeur Sylvie et Mr Donald', freq: '40 minutes par semaine' },
+  { name: 'Eductation Sportive', leader: 'M. Hervé', freq: '1x / semaine' },
+  { name: 'Messe', leader: 'L\'Hômonier du Lycée', freq: 'Première heure de chaque vendredi' },
 ];
 
 export function ClubsGrid() {

@@ -4,7 +4,7 @@ export const navItems = [
   { label: 'Accueil', path: '/' },
   { label: 'Administration', path: '/administration' },
   { label: 'Vie du Lycée', path: '/vie-du-lycee' },
-  { label: 'Actualités & Évènements', path: '/actualites-evenements' },
+  { label: 'Actualités', path: '/actualites-evenements' },
   { label: 'Admission', path: '/admission' },
   { label: 'Contact', path: '/contact' },
 ] as const;
@@ -15,9 +15,9 @@ export const adminPath = '/admin';
 export const school = {
   shortName: 'LCNDT',
   name: 'Lycée Collège Notre Dame du Tchad',
-  tagline: 'Former le savoir, préparer l’avenir.',
+  tagline: 'Lycée Collège Notre Dame du Tchad (LCNDT), Moundou : plus de 50 ans au service de l’éducation',
   city: 'Moundou',
-  address: 'Quartier 15 ans, Moundou — Tchad',
+  address: 'Lycée Collège Notre Dame du Tchad, BP 61, Moundou, Tchad',
   phoneDisplay: '+235 66363126',
   phoneHref: 'tel:+23566363126',
   email: 'lcndt-moundou@gmail.com',

@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { ContactCoordinates } from '../components/OfficialDetails';
+import { PageHero } from '../components/PageHero';
 import { school } from '../data/site';
 
 const EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -28,11 +29,17 @@ export default function Contact() {
 
   return (
     <main className="inner">
+      <PageHero
+        image="/images/courtyard.jpg"
+        kicker="Contact"
+        title="Nous contacter"
+        lead="Pour toute demande administrative, utilisez le formulaire ci-dessous ou contactez le secrétariat du lycée."
+      />
       <div className="shell contact-heading">
-        <h1>Contactez la vie scolaire</h1>
+        <h1>Nous contacter</h1>
         <p className="inner-lead">
-          Pour toute demande administrative, utilisez le formulaire ci-dessous ou appelez le
-          secrétariat.
+          Pour toute demande administrative, utilisez le formulaire ci-dessous ou contactez le
+          secrétariat du lycée.
         </p>
 
         <div className="contact-row">

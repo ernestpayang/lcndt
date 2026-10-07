@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import AuthGate from '../components/AuthGate';
+import { PageHero } from '../components/PageHero';
 import { createEmptyItem, loadNews, saveNews, type NewsItem, type NewsKind } from '../data/news';
 
 const byDateDesc = (a: NewsItem, b: NewsItem) =>
@@ -87,6 +88,12 @@ function AdminPage() {
 
   return (
     <main className="inner">
+      <PageHero
+        image="/images/classroom.jpg"
+        kicker="Administration"
+        title="Gestion des articles et événements"
+        lead="Gérez le contenu éditorial du site, publiez les actualités et mettez à jour le calendrier du lycée."
+      />
       <div className="shell">
         <Link className="back" to="/">
           Retour

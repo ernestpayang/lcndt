@@ -1,7 +1,8 @@
 import { useMemo, useRef, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import ArticlePreview from '../components/ArticlePreview';
-import { getPublishedArticles, getUpcomingEvents, loadNews, type NewsItem } from '../data/news';
+import { PageHero } from '../components/PageHero';
+import { getPublishedArticles, loadNews, type NewsItem } from '../data/news';
 import { K } from '../shared/ui';
 
 const formatDate = (d: string) =>
@@ -84,15 +85,19 @@ export default function Actualites() {
   const [items] = useState(() => loadNews());
   const [selected, setSelected] = useState<NewsItem | null>(null);
 
-  const upcomingEvents = useMemo(() => getUpcomingEvents(items), [items]);
   const articles = useMemo(() => getPublishedArticles(items), [items]);
-
-  const featuredEvents = upcomingEvents.slice(0, 3);
+  const featuredArticles = useMemo(() => articles.slice(0, 3), [articles]);
 
   return (
     <main className="inner">
+      <PageHero
+        image="/images/activities.jpg"
+        kicker="Actualités"
+        title="Actualités"
+        lead="Suivez les dernières annonces, publications et moments forts de la vie du lycée."
+      />
       <div className="shell">
-        <h1>Actualités & Évènements</h1>
+        <h1>Actualités</h1>
 
         <ArticlePreview article={selected} onClose={() => setSelected(null)} />
 
@@ -103,39 +108,21 @@ export default function Actualites() {
               Mise en avant
             </p>
             <h2 id="a-la-une-titre">À la une</h2>
-            <p className="news-section-note">Les trois évènements à venir les plus proches.</p>
+            <p className="news-section-note">Les trois dernières publications les plus visibles.</p>
           </div>
-          {featuredEvents.length === 0 ? (
-            <p className="empty-note">Aucun évènement à venir pour le moment.</p>
+          {featuredArticles.length === 0 ? (
+            <p className="empty-note">Aucune actualité pour le moment.</p>
           ) : (
             <div className="featured-grid">
-              {featuredEvents.map((event) => (
-                <NewsCard key={event.id} item={event} featured onRead={() => setSelected(event)} />
+              {featuredArticles.map((article) => (
+                <NewsCard
+                  key={article.id}
+                  item={article}
+                  featured
+                  onRead={() => setSelected(article)}
+                />
               ))}
             </div>
-          )}
-        </section>
-
-        <section className="events-section" aria-labelledby="evenements-titre">
-          <div className="section-heading">
-            <p className="k">
-              <i />
-              Agenda
-            </p>
-            <h2 id="evenements-titre">Évènements</h2>
-            <p className="news-section-note">
-              {upcomingEvents.length} évènement{upcomingEvents.length > 1 ? 's' : ''} à venir —
-              trois par ligne, faites défiler horizontalement pour voir la suite.
-            </p>
-          </div>
-          {upcomingEvents.length === 0 ? (
-            <p className="empty-note">Aucun évènement prévu pour le moment.</p>
-          ) : (
-            <Carousel id="piste-evenements" label="Évènements à venir">
-              {upcomingEvents.map((event) => (
-                <NewsCard key={event.id} item={event} onRead={() => setSelected(event)} />
-              ))}
-            </Carousel>
           )}
         </section>
 

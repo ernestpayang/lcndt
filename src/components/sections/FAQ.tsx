@@ -1,11 +1,11 @@
 const faqs = [
   {
     q: 'Comment inscrire un élève ?',
-    a: 'Prendre contact avec l’administration. Dossier: acte de naissance, bulletins et certificat médical.',
+    a: 'Les inscriptions de nouveaux élèves se font après les tests d’admission, généralement en septembre.',
   },
   {
     q: 'Y a-t-il un internat ?',
-    a: 'Oui, places limitées selon filières. Contacter la scolarité.',
+    a: 'Oui, il y a le service Demi-internat (de 12:30 à 15:30) uniquement réservé aux filles.',
   },
   { q: 'Quels sont les horaires ?', a: 'Journée de 07:30 à 16:30 avec pauses et cantine.' },
 ];

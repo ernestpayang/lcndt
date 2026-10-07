@@ -117,7 +117,7 @@
 }
 
 .official {
-  padding: 40px 0;
+  padding: 32px 0 20px;
 }
 .official h2 {
   margin-bottom: 16px;
@@ -128,13 +128,21 @@
   gap: 16px;
 }
 .official-grid article {
-  padding: 18px;
-  background: #fff;
-  border-top: 3px solid var(--gold);
-  box-shadow: 0 4px 14px #18304010;
+  padding: 20px 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-top: 4px solid var(--pink-strong);
+  border-radius: 0;
+  box-shadow: 0 12px 24px rgba(18, 38, 61, 0.06);
 }
 .official-grid p {
   margin-bottom: 0;
+  color: var(--muted);
+}
+.official-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
 }
 .official a {
   color: var(--green);
@@ -155,18 +163,62 @@
 .contact-row form {
   margin: 0 !important;
   max-width: none !important;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-radius: 0;
+  box-shadow: 0 12px 24px rgba(18, 38, 61, 0.06);
+}
+.contact-row form label,
+.article-form label,
+.creds-card form label,
+.auth-login form label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--ink);
+  font-weight: 700;
+}
+.contact-row form input,
+.contact-row form textarea,
+.article-form input,
+.article-form textarea,
+.creds-card form input,
+.auth-login form input,
+.auth-login form textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 102, 153, 0.18);
+  border-radius: 12px;
+  background: #f9fbff;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--ink);
+}
+.contact-row form input:focus,
+.contact-row form textarea:focus,
+.article-form input:focus,
+.article-form textarea:focus,
+.creds-card form input:focus,
+.auth-login form input:focus,
+.auth-login form textarea:focus {
+  outline: 2px solid rgba(0, 102, 153, 0.2);
+  border-color: var(--green);
 }
 .contact-row .contact-coordinates {
   margin: 0;
-  padding: 20px;
-  background: var(--paper);
-  border-top: 3px solid var(--gold);
+  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-top: 4px solid var(--pink-strong);
+  border-radius: 0;
+  box-shadow: 0 12px 24px rgba(18, 38, 61, 0.06);
 }
 .contact-row .contact-coordinates h2 {
   font-size: 25px;
 }
 .contact-row .contact-coordinates p {
   line-height: 2;
+  color: var(--muted);
 }
 @media (max-width: 760px) {
   .contact-row {

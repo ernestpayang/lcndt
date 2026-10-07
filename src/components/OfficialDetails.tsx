@@ -1,30 +1,31 @@
 import { school } from '../data/site';
 
-/** Accueil — « Le LCNDT en bref » */
+/** Accueil — « Notre histoire » */
 export function OverviewSection() {
   return (
     <section className="official shell">
-      <h2>Le LCNDT en bref</h2>
+      <h2>Notre histoire</h2>
       <div className="official-grid">
         <article>
-          <strong>Fondé en 1966</strong>
+          <strong>1966 : fondation</strong>
           <p>
-            Fondé sous la direction de Sœur Thérèse CADORET, le lycée s’inscrit dans la mission
-            éducative catholique à Moundou.
+            Créé en 1966 avec 40 filles, le collège est confié aux Sœurs Oblates de Sainte
+            Thérèse de l’Enfant Jésus. Sa fondatrice et première directrice est Sœur Thérèse
+            Cadoret.
           </p>
         </article>
         <article>
-          <strong>Foi, travail, réussite.</strong>
+          <strong>Un rêve devenu réalité</strong>
           <p>
-            Notre mission : offrir un enseignement de qualité aux jeunes tout en renforçant leur foi
-            chrétienne.
+            Aujourd’hui, les anciennes et anciens élèves du LCNDT occupent des postes de cadres dans
+            de nombreux secteurs publics, parapublics et privés du pays.
           </p>
         </article>
         <article>
-          <strong>Parcours et langues</strong>
+          <strong>Cinquantenaire</strong>
           <p>
-            De la 6e d’accueil à la Terminale. Séries A4, C et D. Enseignement en français et en
-            anglais.
+            En décembre 2016, l’établissement célèbre son cinquantième anniversaire à Moundou, dans
+            une grande fête de mémoire, de gratitude et d’espérance.
           </p>
         </article>
       </div>

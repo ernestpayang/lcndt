@@ -1,12 +1,37 @@
 /* ——— Pages intérieures ——— */
 .inner {
-  padding: 40px 0 64px;
-  background: var(--paper);
+  padding: 52px 0 80px;
+  background: linear-gradient(180deg, rgba(244, 249, 255, 0.9) 0%, rgba(255, 248, 251, 0.95) 100%);
   min-height: 70vh;
 }
 .inner .shell {
-  max-width: 1040px;
+  max-width: 1100px;
 }
+
+.inner .admit,
+.inner form,
+.page-articles .article,
+.programs-section .tabs button,
+.schedule-table,
+.pro-grid article,
+.team-grid article,
+.timeline article,
+.featured-card,
+.news-mini-card,
+.preview-card,
+.contact-map-frame,
+.photo-gallery figure,
+.auth-login,
+.auth-helpers form,
+.article-form,
+.creds-card,
+.admin-list li,
+.contact-row form,
+.contact-row .contact-coordinates,
+.official-grid article {
+  border-radius: 0 !important;
+}
+
 .inner .back {
   display: inline-flex;
   align-items: center;
@@ -27,11 +52,15 @@
   object-position: center;
   display: block;
   margin: 0 0 20px;
+  border-radius: 18px;
+  box-shadow: 0 18px 34px rgba(18, 38, 61, 0.12);
 }
 .inner-lead {
   font-size: 18px;
   max-width: 760px;
   margin: 0 0 22px;
+  color: var(--muted);
+  line-height: 1.8;
 }
 .inner .page-facts {
   max-width: 800px;
@@ -40,11 +69,20 @@
 .inner .admit {
   max-width: 720px;
   margin-top: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-left: 4px solid var(--pink-strong);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 12px 24px rgba(18, 38, 61, 0.06);
 }
 .inner form {
   max-width: 720px;
   margin-top: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(18, 38, 61, 0.06);
 }
 .page-articles {
   display: grid;
@@ -56,6 +94,8 @@
   background: #fff;
   border: 1px solid var(--line);
   padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .page-articles .article > div {
   padding: 14px;
@@ -104,12 +144,12 @@
   background: transparent;
   border: 1px solid var(--line);
   padding: 10px;
-  border-radius: 0;
+  border-radius: 12px;
   text-align: left;
 }
 .programs-section .tabs button.active {
-  background: var(--line);
-  border-color: var(--line);
+  background: #edf4fb;
+  border-color: rgba(0, 102, 153, 0.2);
 }
 .programs-section .tabs button:focus-visible {
   outline: 2px solid var(--green);
@@ -119,9 +159,11 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 12px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 .schedule-table td {
-  padding: 10px;
+  padding: 12px 10px;
   border-bottom: 1px solid var(--line);
 }
 .schedule-table .time {
@@ -137,8 +179,8 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 14px;
+  gap: 16px;
+  margin-top: 18px;
 }
 .team-card h3 {
   font-size: 1.25rem;
@@ -157,7 +199,8 @@
 }
 .faq-list details {
   border-top: 1px solid var(--line);
-  padding: 10px 0;
+  padding: 12px 0;
+  border-radius: 8px;
 }
 .faq-list summary {
   cursor: pointer;
@@ -166,7 +209,8 @@
 
 /* ——— Sections « pro » (fusionnées depuis professional.css) ——— */
 .pro {
-  padding: 48px 0;
+  padding: 32px 0 40px;
+  background: transparent;
 }
 .pro-heading {
   max-width: 700px;
@@ -179,14 +223,16 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
   margin-top: 20px;
 }
 .pro-grid article,
 .team-grid article {
-  padding: 18px;
-  background: #fff;
-  border: 1px solid var(--line);
+  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(18, 38, 61, 0.06);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
@@ -194,7 +240,7 @@
 .pro-grid article:hover,
 .team-grid article:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px #18304014;
+  box-shadow: 0 18px 30px rgba(18, 38, 61, 0.1);
 }
 .pro-grid strong,
 .pro-grid span,
@@ -209,7 +255,7 @@
 .pro-grid span {
   margin-top: 6px;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .team-grid {
   grid-template-columns: repeat(4, 1fr);
@@ -233,15 +279,17 @@
 .timeline {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 16px;
   margin: 20px 0;
 }
 .timeline article {
   display: grid;
-  gap: 6px;
-  padding: 16px;
-  border-top: 3px solid var(--gold);
-  background: #fff;
+  gap: 8px;
+  padding: 20px 18px;
+  border-top: 4px solid var(--pink-strong);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(18, 38, 61, 0.06);
 }
 .timeline b {
   color: var(--clay);
@@ -256,9 +304,10 @@
   padding: 13px 20px;
   background: var(--green);
   color: white;
-  border-radius: 5px;
+  border-radius: 0;
   text-decoration: none;
   font-weight: 700;
+  box-shadow: none;
 }
 .contact-tools {
   display: grid;
@@ -270,10 +319,15 @@
   border: 0;
   width: 100%;
   height: 270px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .contact-tools > div {
   padding: 18px;
-  background: var(--paper);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 102, 153, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 12px 22px rgba(18, 38, 61, 0.04);
 }
 
 /* ——— Carte plein cadre sur la page Contact (juste avant le pied de page) ——— */

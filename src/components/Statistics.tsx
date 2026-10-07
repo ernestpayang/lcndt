@@ -1,8 +1,8 @@
 const stats: ReadonlyArray<readonly [label: string, value: string, note: string]> = [
-  ['Élèves inscrits', '743', 'Année scolaire 2026/2027'],
-  ['Enseignants & Personnel', '32', 'Corps pédagogique et encadrement'],
-  ['Taux de réussite BEPC', '100%', 'Dernière session'],
-  ['Taux de réussite BAC', '98%', 'Dernière session'],
+  ['Effectif', '411 élèves', '301 filles / 110 garçons'],
+  ['Admission supérieure', '80 % à 95 %', 'Taux d’admission en classe supérieure'],
+  ['Réussite aux examens', '90 % à 100 %', 'BEPCT et baccalauréat'],
+  ['Années d’existence', '50+', 'Depuis 1966'],
 ];
 
 export function Statistics() {

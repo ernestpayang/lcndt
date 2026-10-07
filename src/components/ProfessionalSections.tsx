@@ -13,26 +13,26 @@ export function WhyLcndt() {
       <div className="pro-heading">
         <p className="k">
           <i />
-          Pourquoi le LCNDT
+          Valeurs et engagement
         </p>
-        <h2>Grandir dans la foi, apprendre avec ambition.</h2>
+        <h2>50 ans au service de l’épanouissement des hommes et des femmes.</h2>
         <p>
-          Un accompagnement attentif, des enseignants engagés et une communauté éducative au service
-          de la réussite de chaque élève.
+          Fondé en 1966, le LCNDT a consacré plus d’un demi-siècle à la formation des jeunes, à la
+          discipline, à l’excellence et aux valeurs humaines et chrétiennes.
         </p>
       </div>
       <div className="pro-grid">
         <article>
-          <strong>Accompagnement</strong>
-          <span>Suivi pédagogique et dialogue régulier avec les familles.</span>
+          <strong>Éducation de qualité</strong>
+          <span>Des résultats constants : 80 % à 95 % d’admission en classe supérieure et 90 % à 100 % de réussite aux examens.</span>
         </article>
         <article>
-          <strong>Vie communautaire</strong>
-          <span>Temps de prière, service et activités de fraternité.</span>
+          <strong>Discipline & excellence</strong>
+          <span>Un encadrement rigoureux, un suivi attentif des élèves et un esprit d’effort au service de la réussite.</span>
         </article>
         <article>
-          <strong>Ouverture</strong>
-          <span>Clubs, culture, sport et projets citoyens.</span>
+          <strong>Développement du pays</strong>
+          <span>Une option préférentielle pour l’instruction et l’éducation des femmes, au service de l’Église et du développement national.</span>
         </article>
       </div>
     </section>
@@ -45,23 +45,30 @@ export function LeadershipSection() {
     <section className="pro shell">
       <p className="k">
         <i />
-        Équipe de direction
+        Tutelle & direction
       </p>
-      <h2>Des responsables au service des élèves.</h2>
-      <div className="team-grid">
-        {staff.map(({ name, role }) => (
-          <article key={name}>
-            <div className="avatar">
-              {name
-                .split(' ')
-                .map((x) => x[0])
-                .join('')}
-            </div>
-            <strong>{name}</strong>
-            <span>{role}</span>
-            <p>Disponible pour accompagner les élèves et leurs familles.</p>
-          </article>
-        ))}
+      <div className="official-grid" style={{ marginTop: '2rem' }}>
+        <article>
+          <strong>Tutelle</strong>
+          <p>
+            Diocèse de Moundou, sous l’autorité de Mgr Joachim Kouraleyo Tarounga, Évêque de
+            Moundou.
+          </p>
+        </article>
+        <article>
+          <strong>Partenaires institutionnels</strong>
+          <p>
+            Ministère de l’Éducation Nationale, Association des Parents d’Élèves (APE) et
+            Congrégation des Sœurs Oblates de Sainte Thérèse de l’Enfant Jésus.
+          </p>
+        </article>
+        <article>
+          <strong>Mission</strong>
+          <p>
+            Former les jeunes dans la foi, la discipline, la qualité académique et l’engagement au
+            service du pays.
+          </p>
+        </article>
       </div>
     </section>
   );
@@ -73,23 +80,46 @@ export function SchoolLifeSection() {
     <section className="pro shell">
       <p className="k">
         <i />
-        Vie scolaire
+        Vie de campus
       </p>
-      <h2>Apprendre aussi en dehors de la classe.</h2>
-      <div className="pro-grid">
+      <h2>Une communauté scolaire soudée, disciplinée et tournée vers l’avenir.</h2>
+      <p>
+        Au Lycée-Collège Notre-Dame du Tchad, la vie scolaire ne se limite pas aux salles de
+        classe. Chaque journée est l’occasion de vivre une expérience éducative fondée sur le
+        partage, le respect, la responsabilité et la solidarité.
+      </p>
+      <div className="pro-grid" style={{ marginTop: '1.4rem' }}>
         <article>
-          <strong>Club débat</strong>
-          <span>Prendre la parole, argumenter et écouter.</span>
+          <strong>Une communauté soudée</strong>
+          <span>
+            Le campus est un lieu de rencontre où élèves, enseignants, personnels et familles
+            partagent une même ambition : favoriser la réussite et l’épanouissement de la jeunesse.
+            Le dialogue, l’écoute et le respect créent un climat favorable aux apprentissages.
+          </span>
         </article>
         <article>
-          <strong>Sport & culture</strong>
-          <span>Développer l’esprit d’équipe et les talents.</span>
+          <strong>La discipline comme valeur éducative</strong>
+          <span>
+            La discipline aide les élèves à grandir dans la responsabilité. Respect des horaires,
+            soin des infrastructures, tenue et comportement appropriés, ainsi que l’écoute et le
+            respect des autres participent à la formation du citoyen de demain.
+          </span>
         </article>
         <article>
-          <strong>Solidarité</strong>
-          <span>Mettre en pratique le service des autres.</span>
+          <strong>Une vie scolaire riche et dynamique</strong>
+          <span>
+            À travers les activités culturelles, sportives, religieuses et collectives, les jeunes
+            développent leurs talents, leur confiance en eux et leur capacité à collaborer avec les
+            autres.
+          </span>
         </article>
       </div>
+      <p style={{ marginTop: '1.4rem' }}>
+        L’établissement accueille des jeunes issus d’horizons différents et les encourage à
+        développer des valeurs de respect, de tolérance, de fraternité et de solidarité. L’objectif
+        est clair : préparer les élèves à vivre dans une société diverse, dialoguer avec les autres
+        et se préparer à l’avenir avec sérieux et engagement.
+      </p>
     </section>
   );
 }
