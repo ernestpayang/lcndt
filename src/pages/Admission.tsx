@@ -11,7 +11,7 @@ export default function Admission() {
         image="/images/study.jpg"
         kicker="Admission"
         title="Admission et procédures"
-        lead="La page Admission regroupe le processus, les pièces à fournir et les étapes à suivre pour intégrer le lycée."
+        lead="L'Admission au LCNDT se fait par un test d'entrée organisé en septembre de chaque année. Les candidats doivent fournir un dossier complet comprenant les pièces justificatives nécessaires."
       />
       <div className="shell">
         <h1>Admission et procédures</h1>
@@ -21,9 +21,9 @@ export default function Admission() {
         <div className="admit">
           <strong>Dossier type</strong>
           <ul>
-            <li>Acte de naissance</li>
-            <li>Bulletins des 2 dernières années</li>
-            <li>Certificat médical</li>
+            <li>Une copie d'Acte de naissance</li>
+            <li>Une copie du Bulletin du 3ème trimestre de la dernière année</li>
+            <li>Une photo d'identité</li>
           </ul>
         </div>
       </div>
