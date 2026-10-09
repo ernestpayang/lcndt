@@ -7,7 +7,7 @@ const faqs = [
     q: 'Y a-t-il un internat ?',
     a: 'Oui, il y a le service Demi-internat (de 12:30 à 15:30) uniquement réservé aux filles.',
   },
-  { q: 'Quels sont les horaires ?', a: 'Journée de 07:30 à 16:30 avec pauses et cantine.' },
+  { q: 'Quels sont les horaires ?', a: 'Journée de 07:15 à 17:00 avec pauses et cantine.' },
 ];
 
 export function FAQ() {

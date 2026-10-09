@@ -1,5 +1,5 @@
 const clubs = [
-  { name: 'Bibliothèque', leader: 'Soeur Sylvie et Mr Donald', freq: '40 minutes par semaine' },
+  { name: 'Bibliothèque', leader: 'Soeur MUKAKARANGWA SPECIOSA', freq: '50 minutes par semaine' },
   { name: 'Eductation Sportive', leader: 'M. Hervé', freq: '1x / semaine' },
   { name: 'Messe', leader: 'L\'Hômonier du Lycée', freq: 'Première heure de chaque vendredi' },
 ];
