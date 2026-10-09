@@ -229,7 +229,9 @@ export default function Home() {
           </div>
 
           <div className="home-cta-actions">
-            <a href={school.phoneHref}>{school.phoneDisplay}</a>
+            <a className="btn primary" href={school.phoneHref}>
+              Nous contacter
+            </a>
           </div>
         </div>
       </section>
