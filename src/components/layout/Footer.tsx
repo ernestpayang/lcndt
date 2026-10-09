@@ -7,7 +7,7 @@ export function Footer() {
       <div className="shell footer-layout">
         <section className="footer-school">
           <strong>{school.name}</strong>
-          <p>Lycée catholique qui forme des cadres depuis plus de 50 ans, à Moundou.</p>
+          <p>Lycée catholique qui forme des cadres depuis plus de 60 ans, à Moundou.</p>
         </section>
         <nav className="footer-links" aria-label="Liens rapides">
           <strong>Liens rapides</strong>
