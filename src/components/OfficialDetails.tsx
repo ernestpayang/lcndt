@@ -56,8 +56,7 @@ export function AdmissionDetails() {
         <article>
           <strong>Pièces à fournir</strong>
           <p>
-            Lettre d’appartenance à une église, bulletin du dernier trimestre, 2 photos 4×4 et copie
-            d’acte de naissance.
+            Une copie d'acte de naissance, une copie du bulletin du dernier trimestre et 2 photos 4×4
           </p>
         </article>
       </div>

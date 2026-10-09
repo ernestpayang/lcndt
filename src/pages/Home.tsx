@@ -2,60 +2,8 @@ import { useState } from 'react';
 import { K, B } from '../shared/ui';
 import ArticlePreview from '../components/ArticlePreview';
 import { loadNews, getPublishedArticles, type NewsItem } from '../data/news';
+import { schoolStats, bodyHighlights, courseCards } from '../data/home';
 import { school } from '../data/site';
-
-const schoolStats = [
-  { value: '411', label: 'élèves', note: '301 filles / 110 garçons' },
-  { value: '50+', label: 'ans', note: 'd’existence depuis 1966' },
-  { value: '80 – 95%', label: 'admission', note: 'au second cycle et au lycée' },
-  { value: '90 – 100%', label: 'réussite', note: 'aux examens et concours' },
-];
-
-const bodyHighlights = [
-  {
-    title: 'Éducation catholique',
-    text: 'La foi, le respect et le service éclairent la vie quotidienne.',
-  },
-  {
-    title: 'Bibliothèque',
-    text: 'Un espace calme pour lire, rechercher et approfondir.',
-  },
-  {
-    title: 'Du matin au soir',
-    text: 'Des horaires structurés et un accompagnement régulier.',
-  },
-];
-
-const courseCards = [
-  {
-    title: 'Collège / 6e-3e',
-    text: 'Un cadre scolaire rigoureux pour développer la curiosité, la discipline et la réussite.',
-    image: '/images/gallery-classe.jpg',
-  },
-  {
-    title: 'Second cycle',
-    text: 'Des parcours d’excellence avec accompagnement pédagogique et préparation aux examens.',
-    image: '/images/gallery-sport.jpg',
-  },
-  {
-    title: 'Culture & sport',
-    text: 'Des activités variées pour éveiller les talents, le goût du travail et l’esprit d’équipe.',
-    image: '/images/gallery-foret.jpg',
-  },
-];
-
-const teacherCards = [
-  { name: 'Prof. L. Mbaimoundou', role: 'Mathématiques', image: '/images/gallery-bibliotheque.jpg' },
-  { name: 'Prof. A. Ngaradoum', role: 'Sciences', image: '/images/gallery-classe.jpg' },
-  { name: 'Prof. F. Nako', role: 'Français', image: '/images/gallery-sport.jpg' },
-  { name: 'Prof. J. Djoum', role: 'Civique', image: '/images/activities.jpg' },
-];
-
-const publicationCards = [
-  { title: 'Le LCNDT en chiffres', text: 'Une école stable, exigeante et tournée vers la réussite.' },
-  { title: 'Nous former pour demain', text: 'La formation des filles et des garçons au service du pays.' },
-  { title: 'Une communauté engagée', text: 'Anciens et nouveaux élèves unis autour de l’établissement.' },
-];
 
 export default function Home() {
   const [selectedArticle, setSelectedArticle] = useState<NewsItem | null>(null);
@@ -101,10 +49,10 @@ export default function Home() {
           <p>
             Fondé en 1966 dans le diocèse de Moundou, le LCNDT est un établissement catholique
             reconnu par le Ministère de l’Éducation Nationale. Son histoire illustre un engagement
-            durable au service des jeunes, de l’excellence et de l’éducation des femmes.
+            durable au service des jeunes, de l’excellence et de l’éducation des jeunes filles et garçons.
           </p>
           <p>
-            Plus de 50 ans après sa création, l’école continue de former des élèves solidement
+            Plus de 60 ans après sa création, l’école continue de former des élèves solidement
             encadrés, disciplinés et ouverts sur le monde.
           </p>
           <B to="/contact">Nous contacter</B>
@@ -196,32 +144,32 @@ export default function Home() {
       <section className="shell community-section">
         <div className="community-copy">
           <K>Notre communauté scolaire</K>
-          <h2>Une communauté soudée, disciplinée et tournée vers l’avenir</h2>
+          <h2> Une communauté soudée, disciplinée et tournée vers l’avenir</h2>
 
           <p>
-            <strong>Le LCNDT est avant tout une communauté.</strong>
+            <strong> Le LCNDT est avant tout une communauté.</strong>
           </p>
 
           <p>
-            Élèves, enseignants, éducateurs, personnels administratifs, parents et partenaires
+             Élèves, enseignants, éducateurs, personnels administratifs, parents et partenaires
             contribuent ensemble à créer un environnement favorable à l’apprentissage et à
             l’épanouissement des jeunes.
           </p>
 
           <p>
-            Dans cette communauté, chacun est appelé à respecter l’autre, à prendre ses
+             Dans cette communauté, chacun est appelé à respecter l’autre, à prendre ses
             responsabilités et à contribuer positivement à la vie de l’établissement.
           </p>
 
           <h3>Une école où l’on apprend à vivre ensemble</h3>
 
           <p>
-            À travers les activités pédagogiques, culturelles, sportives, religieuses et sociales,
+             À travers les activités pédagogiques, culturelles, sportives, religieuses et sociales,
             les élèves développent leur esprit d’équipe, leur créativité et leur sens des
             responsabilités.
           </p>
 
-          <B to="/vie-du-lycee">Découvrir la vie scolaire →</B>
+          <B to="/vie-du-lycee">Découvrir la vie scolaire </B>
         </div>
       </section>
 
@@ -270,9 +218,9 @@ export default function Home() {
         <div className="shell home-cta-banner-inner">
           <div className="home-cta-copy">
             <K>Votre avenir commence ici</K>
-            <h2>Choisir le LCNDT, c’est rejoindre une communauté éducative qui place l’élève au cœur de sa mission.</h2>
+            <h2>Choisir le LCNDT ...</h2>
             <p>
-              C’est choisir un cadre où le savoir, la discipline, la foi, la fraternité et
+              ... c’est choisir un cadre où le savoir, la discipline, la foi, la fraternité et
               l’excellence contribuent à préparer les citoyens de demain.
             </p>
             <p>
@@ -281,7 +229,6 @@ export default function Home() {
           </div>
 
           <div className="home-cta-actions">
-            <B to="/vie-du-lycee">Découvrir le LCNDT</B>
             <B to="/contact">Nous contacter</B>
           </div>
         </div>

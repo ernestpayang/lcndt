@@ -93,7 +93,7 @@ export default function Actualites() {
       <PageHero
         image="/images/activities.jpg"
         kicker="Actualités"
-        title="Actualités"
+        title="Nos actualités"
         lead="Suivez les dernières annonces, publications et moments forts de la vie du lycée."
       />
       <div className="shell">

@@ -16,14 +16,13 @@ export default function Admission() {
       <div className="shell">
         <h1>Admission et procédures</h1>
         <p className="inner-lead">
-          La page Admission regroupe le processus, les pièces à fournir et les étapes à suivre.
+          Le dossier de candidatures pour le test d'entrée au LCNDT se compose comme suit :  
         </p>
         <div className="admit">
-          <strong>Dossier type</strong>
           <ul>
             <li>Une copie d'Acte de naissance</li>
             <li>Une copie du Bulletin du 3ème trimestre de la dernière année</li>
-            <li>Une photo d'identité</li>
+            <li>2 photos 4x4</li>
           </ul>
         </div>
       </div>
