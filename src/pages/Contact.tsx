@@ -29,12 +29,6 @@ export default function Contact() {
 
   return (
     <main className="inner">
-      <PageHero
-        image="/images/courtyard.jpg"
-        kicker="Contact"
-        title="Nous contacter"
-        lead="Pour toute demande administrative, utilisez le formulaire ci-dessous ou contactez le secrétariat du lycée."
-      />
       <div className="shell contact-heading">
         <h1>Nous contacter</h1>
         <p className="inner-lead">

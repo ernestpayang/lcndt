@@ -80,7 +80,7 @@ export default function Home() {
         <div className="mini-highlight-grid">
           {bodyHighlights.map((item) => (
             <article key={item.title} className="mini-highlight-card">
-              <span className="mini-highlight-kicker">Valeur</span>
+              <span className="mini-highlight-kicker"></span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
@@ -230,7 +230,7 @@ export default function Home() {
 
           <div className="home-cta-actions">
             <a className="btn primary" href={school.phoneHref}>
-              Nous contacter
+              Nous téléphoner
             </a>
           </div>
         </div>

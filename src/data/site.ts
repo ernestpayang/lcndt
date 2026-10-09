@@ -29,9 +29,19 @@ export const school = {
   mapLink: 'https://maps.app.goo.gl/JhgptAGcFHY7EL8P6?g_st=atm',
 } as const;
 
-export const staff = [
-  { name: 'LASSEM BEINDÉ', role: 'Proviseur' },
-  { name: 'LOMBAYE RENE', role: 'Censeur' },
-  { name: 'MIANTONANG THOMAS', role: 'Surveillant du 2nd cycle' },
-  { name: 'ALBAN NODJI-NDIKIMAL ', role: 'Surveillant du 1er cycle' },
+/** Personnels de direction et d’encadrement administratif. */
+export const adminStaff = [
+  { name: 'LASSEM BEINDÉ', role: 'Proviseur', image: '/images/gallery-bibliotheque.jpg' },
+  { name: 'LOMBAYE RENE', role: 'Censeur', image: '/images/gallery-classe.jpg' },
+  { name: 'MIANTONANG THOMAS', role: 'Surveillant du 2nd cycle', image: '/images/gallery-sport.jpg' },
+  { name: 'ALBAN NODJI-NDIKIMAL', role: 'Surveillant du 1er cycle', image: '/images/activities.jpg' },
 ] as const;
+
+/** Personnel en charge de l’accueil, du suivi scolaire et de la documentation. */
+export const schoolSupportStaff = [
+  { name: 'Sr Syvie Dénédouba', role: 'Secrétaire', image: '/images/gallery-bibliotheque.jpg' },
+  { name: 'Sr Grâce Douba', role: 'Chargé de la scolarité', image: '/images/gallery-classe.jpg' },
+  { name: 'Sr Dénéba', role: 'Chargé de la Bibliothèque', image: '/images/gallery-foret.jpg' },
+] as const;
+
+export const staff = [...adminStaff] as const;

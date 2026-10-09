@@ -51,7 +51,8 @@ export function AdmissionDetails() {
         </article>
         <article>
           <strong>Frais d’inscription</strong>
-          <p>100 000 F CFA, auxquels s’ajoutent 4 000 F CFA pour les copies des épreuves.</p>
+          <p>Lycée : 100 000 F CFA, auxquels s’ajoutent 4 000 F CFA pour les copies des épreuves.</p>
+          <p>Collège : 85 000 F CFA, auxquels s’ajoutent 4 000 F CFA pour les copies des épreuves.</p>
         </article>
         <article>
           <strong>Pièces à fournir</strong>
