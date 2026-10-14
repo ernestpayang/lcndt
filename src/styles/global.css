@@ -965,6 +965,47 @@ h2 {
   font-weight: 700;
 }
 
+@media (max-width: 640px) {
+  .staff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .admin-grid,
+  .scolarite-grid {
+    max-width: 100%;
+  }
+
+  .staff-card {
+    max-width: none;
+    width: 100%;
+    min-height: 280px;
+  }
+
+  .staff-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .staff-info {
+    padding: 14px 12px 16px;
+  }
+
+  .staff-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .staff-info span {
+    font-size: 0.82rem;
+  }
+
+  .scolarite-grid .staff-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 220px);
+  }
+}
+
 .publications-band {
   margin-top: 18px;
   background: #091826;

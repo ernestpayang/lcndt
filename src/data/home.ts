@@ -48,11 +48,11 @@ export const courseCards: HomeCourse[] = [
   {
     title: 'Premier Cycle : 6ème d\'accueil - 3ème',
     text: 'Un nombre limité d\'élèves est affecté à chaque classe pour garantir un encadrement de qualité.',
-    image: '/images/gallery-classe.jpg',
+    image: '/images/college-1.jpeg',
   },
   {
     title: 'Second cycle : 2nde - Terminales',
     text: 'Des classes des Sciences et de Littératures sont disponibles pour préparer l\'avenir de vos progénitures.',
-    image: '/images/gallery-sport.jpg',
+    image: '/images/lycee-3.jpeg',
   },
 ];
